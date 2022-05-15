@@ -1,0 +1,24 @@
+<p-panel header="CARD SORTER" styleClass="dark-panel">
+  <div class="row card-group">
+    <div class="col-2">
+      <label class="label"><b>Card Deck</b></label>
+    </div>
+    <div class="col-4">
+      <p-multiSelect [options]="cards" [(ngModel)]="selectedCards" defaultLabel="Select card(s)" optionLabel="name"
+        display="chip"></p-multiSelect>
+    </div>
+    <div class="col-2">
+      <p-button label="Sort" (onClick)="getSortedCards()" [disabled]="selectedCards.length === 0"></p-button>
+    </div>
+  </div>
+  <label class="label-notify">Note: Ensure to click on sort to see cards in sorted order</label>
+  <p-divider *ngIf="sortedCards.length > 0"></p-divider>
+  <div class="col-4"></div>
+  <div class="row card-group">
+    <div class="col-1" *ngFor="let card of sortedCards">
+      <p-card header={{card}}>
+      </p-card>
+    </div>
+  </div>
+
+</p-panel>

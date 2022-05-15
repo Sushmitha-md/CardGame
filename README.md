@@ -23,3 +23,4 @@ In the end, the output of the sorted cards will be 4T, PT, RT, 2D, 8S, JS, 3C, A
 
   
 Repository created to address the particular problem.
+Using .Net 6, angular 13;
